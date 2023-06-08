@@ -1,5 +1,7 @@
 # stc_crawl
 
+This branch potentially has performance improvement depending on your machine's memory.
+
 To start the crawler, first install the dependencies using Pip:
 ``` 
 $ pip install -r requirements.txt
