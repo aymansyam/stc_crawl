@@ -39,10 +39,12 @@ class ProductsSpider(scrapy.Spider):
         resp = self.selenium_get(response)
 
         elements = resp.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "cmp-ShopCards__button contentWrapperCategory RTL", " " ))]/ul/li')
-        for element in elements:
-            link = element.xpath('./a/@href').get()
-            if link is not None:
-                yield response.follow(link, self.parse_link)
+        
+        # For testing only! test only 1 category instead of multiple
+        element = elements[0]
+        link = element.xpath('./a/@href').get()
+        if link is not None:
+            yield response.follow(link, self.parse_link)
 
     
     def parse_link(self, response):
