@@ -49,6 +49,8 @@ class ProductsSpider(scrapy.Spider):
         # product list
         resp = self.selenium_get(response)
 
+        # [TODO]: click the load more button to get the entire list
+
         elements = resp.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "card-link", " " ))]/@href').getall()
         yield from response.follow_all(elements, self.parse_product)
 
