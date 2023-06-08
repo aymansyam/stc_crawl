@@ -6,7 +6,7 @@ mewa.gov.sa: the crawler will dump a list of html files to the root folder
 
 stc.com.sa: the crawler will grab a list of products for sale and output the names in a json file
 
-To start the crawler, first install the dependencies using Pip:
+To start any crawler, first install the dependencies using Pip:
 ``` 
 $ pip install -r requirements.txt
 ```
@@ -16,7 +16,7 @@ Go to project directory (stc or mewa)
 $ cd stc
 ```
 
-Start the spider 
+Start the desired spider
 
 for mewa:
 ```
