@@ -3,6 +3,8 @@ from selenium import webdriver
 from scrapy.selector import Selector
 from time import sleep
 
+JAVASCRIPT_LOAD_TIME = 5
+
 class ProductsSpider(scrapy.Spider):
     name = "products"
     custom_settings = {
@@ -19,7 +21,7 @@ class ProductsSpider(scrapy.Spider):
 
         # Add a delay for JavaScript to load (change depending on machine performance)
         # If you are getting null items, increase the sleep duration
-        sleep(5)
+        sleep(JAVASCRIPT_LOAD_TIME)
 
         html = self.driver.page_source
         resp = Selector(text=html)
