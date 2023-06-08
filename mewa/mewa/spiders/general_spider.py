@@ -43,6 +43,6 @@ class GeneralSpider(scrapy.Spider):
 
         # Save page content to an HTML file
         page = response.url.split("/")[-2]
-        filename = '%s.html' % page
+        filename = 'mewa_dump/%s.html' % page
         with open(filename, 'wb') as f:
             f.write(response.body)
