@@ -1,6 +1,4 @@
 import scrapy
-from scrapy.selector import Selector
-from time import sleep
 
 class GeneralSpider(scrapy.Spider):
     name = "general"
