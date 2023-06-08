@@ -3,6 +3,7 @@
 This crawler, written in Python using Scrapy framework, has 2 crawlers for stc.com.sa and for mewa.gov.sa.
 
 mewa.gov.sa: the crawler will dump a list of html files to the root folder 
+
 stc.com.sa: the crawler will grab a list of products for sale and output the names in a json file
 
 To start the crawler, first install the dependencies using Pip:
